@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CityFix · Smart Civic Reporting | Pitch Deck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0B1210;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      color: #EDF2F0;
+    }
+
+    .presentation-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 28px 32px 70px;
+    }
+
+    .slide-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      position: sticky;
+      top: 16px;
+      z-index: 30;
+      background: rgba(11, 18, 16, 0.82);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 10px 24px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid rgba(212, 177, 106, 0.3);
+    }
+
+    .nav-dot {
+      background: #202C28;
+      border: none;
+      color: #CFDFD9;
+      padding: 8px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .nav-dot.active {
+      background: linear-gradient(135deg, #C6A15B, #9C7E46);
+      color: #0A0F0E;
+      box-shadow: 0 6px 14px rgba(198, 161, 91, 0.3);
+    }
+
+    .nav-dot:hover {
+      background: #2F423C;
+      color: white;
+    }
+
+    .slides-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+    }
+
+    .slide {
+      background: #111B18;
+      border-radius: 48px;
+      padding: 48px 52px;
+      border: 1px solid rgba(212, 177, 106, 0.2);
+      box-shadow: 0 25px 40px -16px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s, border-color 0.2s;
+      scroll-margin-top: 100px;
+    }
+
+    .slide:hover {
+      border-color: rgba(198, 161, 91, 0.5);
+    }
+
+    h1 {
+      font-size: 4.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #EADAAE, #C6A15B);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      border-left: 5px solid #C6A15B;
+      padding-left: 22px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: #E6D5B0;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: #B1CDC2;
+      max-width: 680px;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .feature-card, .stat-card {
+      background: #0E1915;
+      padding: 26px;
+      border-radius: 32px;
+      transition: all 0.2s;
+      border: 1px solid #25332E;
+    }
+
+    .feature-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #C6A15B;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      background: #1F2E28;
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #C6A15B;
+      margin-bottom: 24px;
+    }
+
+    .workflow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .step {
+      flex: 1;
+      background: #0D1713;
+      border-radius: 28px;
+      padding: 24px;
+      text-align: center;
+      border-top: 3px solid #C6A15B;
+    }
+
+    .step-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #C6A15B;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      border-left: 3px solid #C6A15B;
+      padding-left: 28px;
+      margin: 36px 0 20px;
+    }
+
+    .footer-name {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 32px;
+      border-top: 1px solid #2A3B35;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-name span {
+      color: #C6A15B;
+      font-weight: 800;
+    }
+
+    .metrics-flex {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .pill {
+      background: #1E2D27;
+      border-radius: 60px;
+      padding: 8px 20px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 850px) {
+      .slide {
+        padding: 32px 24px;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      .grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .workflow-steps {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="presentation-container">
+  <div class="slide-nav" id="slideNav"></div>
+
+  <div class="slides-wrapper" id="slidesWrapper">
+    
+    <!-- SLIDE 1: TITLE -->
+    <div class="slide" data-title="Intro">
+      <div class="badge-tag">🏛️ CIVIC REPORTING PITCH · 2026</div>
+      <h1 style="font-size: 4.6rem; margin-bottom: 20px;">CityFix</h1>
+      <p style="font-size: 1.7rem; font-weight: 500; margin-bottom: 16px;">Fix Today. Build Tomorrow.</p>
+      <p class="hero-sub">Simple, transparent, and fast — a civic reporting platform that connects citizens directly to authorities.</p>
+      <div class="metrics-flex" style="margin-top: 48px;">
+        <div class="pill">📱 Report with photo + location</div>
+        <div class="pill">🆔 Track with Case ID</div>
+        <div class="pill">👑 Central admin dashboard</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: THE PROBLEM -->
+    <div class="slide" data-title="Problem">
+      <h2>⚡ The problem we solve</h2>
+      <div class="grid-2col">
+        <div class="feature-card"><div style="font-size: 2.4rem;">📋</div><h3>Unreported issues</h3><p>Potholes, broken lights, waste piles – citizens have no easy way to report.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">🔒</div><h3>No transparency</h3><p>No real-time tracking. Citizens never know if their complaint is being handled.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">⏳</div><h3>Slow resolution</h3><p>Manual processes cause delays. Departments work in silos.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">📉</div><h3>No central view</h3><p>Municipalities lack a single dashboard to see all complaints.</p></div>
+      </div>
+      <div class="quote">“Citizens want to report — but the current process is broken.”</div>
+    </div>
+
+    <!-- SLIDE 3: WHAT CITYFIX ACTUALLY DOES -->
+    <div class="slide" data-title="Solution">
+      <h2>🚀 What CityFix delivers today</h2>
+      <div class="grid-2col">
+        <div class="feature-card"><h3>📲 Easy reporting</h3><p>Users submit complaints with photo, category, description, and location. GPS auto‑detection available.</p></div>
+        <div class="feature-card"><h3>🆔 Case ID tracking</h3><p>Every complaint gets a unique ID (CFX-001, CFX-002…). Users can track status anytime.</p></div>
+        <div class="feature-card"><h3>👑 Admin dashboard</h3><p>Centralised view of all complaints. Filter by category, status, priority, or search by ID.</p></div>
+        <div class="feature-card"><h3>⚡ Live status updates</h3><p>Admin changes status → user page updates automatically without refresh. Real-time transparency.</p></div>
+        <div class="feature-card"><h3>🏷️ Smart priority</h3><p>Complaints auto‑labeled as Critical / High / Normal based on keywords.</p></div>
+        <div class="feature-card"><h3>🌙 Accessible design</h3><p>Dark/light mode, mobile‑friendly, works on any device with a browser.</p></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: HOW IT WORKS -->
+    <div class="slide" data-title="How it works">
+      <h2>📌 How it works – simple flow</h2>
+      <div class="workflow-steps">
+        <div class="step"><div class="step-number">1</div><strong>📸 Citizen reports</strong><br>Adds photo, category, description, location. Submits.</div>
+        <div class="step"><div class="step-number">2</div><strong>✅ Admin reviews</strong><br>Dashboard shows all complaints. Officials update status.</div>
+        <div class="step"><div class="step-number">3</div><strong>🔄 Live tracking</strong><br>User sees status change instantly (Pending → In Progress → Resolved).</div>
+      </div>
+      <div style="margin-top: 32px; background: #0D1915; padding: 20px; border-radius: 28px;">
+        <p>✅ <strong>End‑to‑end transparency:</strong> every status update is visible. No black holes.</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: IMPACT METRICS -->
+    <div class="slide" data-title="Impact">
+      <h2>📈 Measurable impact</h2>
+      <div class="grid-2col">
+        <div class="stat-card"><div class="stat-number">100%</div><div>transparent workflow — every complaint tracked</div></div>
+        <div class="stat-card"><div class="stat-number">Real‑time</div><div>status updates — no refresh needed</div></div>
+        <div class="stat-card"><div class="stat-number">Centralized</div><div>dashboard for all municipal complaints</div></div>
+        <div class="stat-card"><div class="stat-number">24/7</div><div>accessibility for citizens</div></div>
+      </div>
+      <div style="margin-top: 26px; background: #1E2D27; border-radius: 28px; padding: 16px 24px;">
+        <p>🏆 <strong>Pilot ready:</strong> Platform is fully functional and can be deployed immediately.</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: ADMIN DASHBOARD FEATURES -->
+    <div class="slide" data-title="Admin Dashboard">
+      <h2>🏛️ Admin dashboard – full control</h2>
+      <div class="grid-2col">
+        <div class="feature-card"><h3>📋 All complaints</h3><p>View every report with photo, description, location, and timestamp.</p></div>
+        <div class="feature-card"><h3>⚙️ Status management</h3><p>Change status: Pending → In Progress → Resolved. Saves instantly.</p></div>
+        <div class="feature-card"><h3>🔍 Filters & search</h3><p>Filter by status or priority. Search by Case ID.</p></div>
+        <div class="feature-card"><h3>📊 Live stats</h3><p>Real-time counts: Total reports, Pending, In Progress, Resolved, Critical.</p></div>
+      </div>
+      <div class="pill" style="margin-top: 28px;">✅ Simple, clean, and ready for municipal teams.</div>
+    </div>
+
+    <!-- SLIDE 7: CATEGORIES COVERED -->
+    <div class="slide" data-title="Categories">
+      <h2>📂 Issue categories covered</h2>
+      <div class="grid-2col">
+        <div class="feature-card"><h3>🏗️ Infrastructure</h3><p>Roads & Potholes, Drainage Blockage, Footpath Damage, Building Violations</p></div>
+        <div class="feature-card"><h3>💧 Utilities</h3><p>Water Supply, Electricity</p></div>
+        <div class="feature-card"><h3>🚦 Transport & Safety</h3><p>Street Lighting, Traffic Signals, Open Manholes, Stray Animals</p></div>
+        <div class="feature-card"><h3>🧹 Cleanliness</h3><p>Waste Management, Public Toilet Maintenance</p></div>
+        <div class="feature-card"><h3>🌳 Environment</h3><p>Tree Fall, Air Pollution, Noise Pollution</p></div>
+        <div class="feature-card"><h3>📋 Others</h3><p>Custom category for anything not listed</p></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: WHY PARTNER -->
+    <div class="slide" data-title="Why partner">
+      <h2>🤝 Why partner with CityFix?</h2>
+      <div class="grid-2col">
+        <div><span style="font-size: 2rem;">✅</span><br><strong>Ready to deploy</strong><br>No complex setup. Works today.</div>
+        <div><span style="font-size: 2rem;">💰</span><br><strong>Cost‑effective</strong><br>Lightweight platform, minimal infrastructure.</div>
+        <div><span style="font-size: 2rem;">📢</span><br><strong>Builds trust</strong><br>Transparency improves citizen satisfaction and government credibility.</div>
+        <div><span style="font-size: 2rem;">🛡️</span><br><strong>Simple & secure</strong><br>Data stays in browser; easy to deploy on municipal systems.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: NEXT STEPS -->
+    <div class="slide" data-title="Next Steps">
+      <h2>📌 Next steps – pilot deployment</h2>
+      <div class="workflow-steps" style="margin-bottom: 28px;">
+        <div class="step"><div class="step-number">1</div><strong>Pilot launch</strong><br>Select one ward or zone. Deploy user page + admin dashboard.</div>
+        <div class="step"><div class="step-number">2</div><strong>Train officers</strong><br>2‑hour session for admin dashboard usage.</div>
+        <div class="step"><div class="step-number">3</div><strong>Citizen rollout</strong><br>Share link with residents. Start receiving reports.</div>
+        <div class="step"><div class="step-number">4</div><strong>Review & scale</strong><br>Measure impact, expand city‑wide.</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: CLOSING -->
+    <div class="slide" data-title="Together">
+      <h2>🏙️ Let’s build better cities. Together.</h2>
+      <p style="font-size: 1.4rem; margin: 28px 0;">CityFix is simple, honest, and ready to serve your municipality today.</p>
+      <div style="background: #0B1512; border-radius: 36px; padding: 32px; text-align: center; margin: 28px 0;">
+        <div style="font-size: 1.6rem;">🇦🇪 <strong>For smarter civic governance</strong></div>
+        <p style="margin: 16px 0 0;">Transparent. Accountable. Fast.</p>
+      </div>
+      <div class="footer-name" style="border-top: none; margin-top: 10px;">
+        Presented by <span>Hammad Sayed</span>
+      </div>
+      <p style="text-align: center; margin-top: 24px; opacity: 0.7;">Fix today for a better tomorrow.</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const navContainer = document.getElementById('slideNav');
+
+  function buildNav() {
+    navContainer.innerHTML = '';
+    slides.forEach((slide, idx) => {
+      const titleAttr = slide.getAttribute('data-title') || `Slide ${idx+1}`;
+      const btn = document.createElement('button');
+      btn.className = 'nav-dot';
+      btn.innerText = titleAttr;
+      btn.addEventListener('click', () => {
+        slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateActiveNav(idx);
+      });
+      navContainer.appendChild(btn);
+    });
+    if (slides.length) updateActiveNav(0);
+  }
+
+  function updateActiveNav(activeIndex) {
+    const btns = document.querySelectorAll('.nav-dot');
+    btns.forEach((btn, i) => {
+      if (i === activeIndex) btn.classList.add('active');
+      else btn.classList.remove('active');
+    });
+  }
+
+  const observerOptions = { threshold: 0.45 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = Array.from(slides).indexOf(entry.target);
+        if (index !== -1) updateActiveNav(index);
+      }
+    });
+  }, observerOptions);
+
+  slides.forEach(slide => observer.observe(slide));
+  buildNav();
+</script>
+</body>
+</html>
