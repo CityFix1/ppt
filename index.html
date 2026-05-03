@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>CityFix · Smart Civic Reporting | Pitch Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityFix | Smart Civic Reporting Platform | Pitch Deck</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -13,7 +13,7 @@
     }
 
     body {
-      background: #0B1210;
+      background: #0A0F0E;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       overflow-x: hidden;
       color: #EDF2F0;
@@ -34,7 +34,7 @@
       position: sticky;
       top: 16px;
       z-index: 30;
-      background: rgba(11, 18, 16, 0.82);
+      background: rgba(10, 15, 14, 0.85);
       backdrop-filter: blur(12px);
       border-radius: 60px;
       padding: 10px 24px;
@@ -216,6 +216,17 @@
       font-weight: 500;
     }
 
+    .demo-link {
+      background: #C6A15B;
+      color: #0A0F0E;
+      padding: 12px 28px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
     @media (max-width: 850px) {
       .slide {
         padding: 32px 24px;
@@ -244,61 +255,62 @@
     
     <!-- SLIDE 1: TITLE -->
     <div class="slide" data-title="Intro">
-      <div class="badge-tag">🏛️ CIVIC REPORTING PITCH · 2026</div>
+      <div class="badge-tag">🏛️ GOVERNMENT PITCH · 2026</div>
       <h1 style="font-size: 4.6rem; margin-bottom: 20px;">CityFix</h1>
-      <p style="font-size: 1.7rem; font-weight: 500; margin-bottom: 16px;">Fix Today. Build Tomorrow.</p>
-      <p class="hero-sub">Simple, transparent, and fast — a civic reporting platform that connects citizens directly to authorities.</p>
+      <p style="font-size: 1.7rem; font-weight: 500; margin-bottom: 16px;">Fixing Today for a Better Tomorrow</p>
+      <p class="hero-sub">A smart civic engagement ecosystem that bridges citizens and authorities — real-time reporting, transparent tracking, and data-driven governance.</p>
       <div class="metrics-flex" style="margin-top: 48px;">
-        <div class="pill">📱 Report with photo + location</div>
-        <div class="pill">🆔 Track with Case ID</div>
+        <div class="pill">⚡ Real-time status updates</div>
+        <div class="pill">📱 Report with photo + GPS</div>
         <div class="pill">👑 Central admin dashboard</div>
       </div>
+      <a href="https://cityfix11.netlify.app/" class="demo-link" target="_blank">🔗 VIEW LIVE DEMO →</a>
     </div>
 
     <!-- SLIDE 2: THE PROBLEM -->
     <div class="slide" data-title="Problem">
-      <h2>⚡ The problem we solve</h2>
+      <h2>⚡ The Urban Challenge</h2>
       <div class="grid-2col">
-        <div class="feature-card"><div style="font-size: 2.4rem;">📋</div><h3>Unreported issues</h3><p>Potholes, broken lights, waste piles – citizens have no easy way to report.</p></div>
-        <div class="feature-card"><div style="font-size: 2.4rem;">🔒</div><h3>No transparency</h3><p>No real-time tracking. Citizens never know if their complaint is being handled.</p></div>
-        <div class="feature-card"><div style="font-size: 2.4rem;">⏳</div><h3>Slow resolution</h3><p>Manual processes cause delays. Departments work in silos.</p></div>
-        <div class="feature-card"><div style="font-size: 2.4rem;">📉</div><h3>No central view</h3><p>Municipalities lack a single dashboard to see all complaints.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">📋</div><h3>Unreported Issues</h3><p>Potholes, broken lights, waste piles – citizens lack reliable channels. Complaints vanish in legacy systems.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">🔒</div><h3>No Transparency</h3><p>No real-time tracking, no feedback loop. Citizens feel unheard, eroding trust in local governance.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">⏳</div><h3>Slow Resolution</h3><p>Manual assignments & siloed departments → delayed responses, wasted resources.</p></div>
+        <div class="feature-card"><div style="font-size: 2.4rem;">📉</div><h3>Data Deficit</h3><p>Municipalities lack actionable analytics to predict hotspots or optimize maintenance.</p></div>
       </div>
-      <div class="quote">“Citizens want to report — but the current process is broken.”</div>
+      <div class="quote">"Citizens want to participate — but the system must meet them where they are."</div>
     </div>
 
-    <!-- SLIDE 3: WHAT CITYFIX ACTUALLY DOES -->
+    <!-- SLIDE 3: SOLUTION -->
     <div class="slide" data-title="Solution">
-      <h2>🚀 What CityFix delivers today</h2>
+      <h2>🚀 CityFix – Intelligent Civic Platform</h2>
       <div class="grid-2col">
-        <div class="feature-card"><h3>📲 Easy reporting</h3><p>Users submit complaints with photo, category, description, and location. GPS auto‑detection available.</p></div>
-        <div class="feature-card"><h3>🆔 Case ID tracking</h3><p>Every complaint gets a unique ID (CFX-001, CFX-002…). Users can track status anytime.</p></div>
-        <div class="feature-card"><h3>👑 Admin dashboard</h3><p>Centralised view of all complaints. Filter by category, status, priority, or search by ID.</p></div>
-        <div class="feature-card"><h3>⚡ Live status updates</h3><p>Admin changes status → user page updates automatically without refresh. Real-time transparency.</p></div>
-        <div class="feature-card"><h3>🏷️ Smart priority</h3><p>Complaints auto‑labeled as Critical / High / Normal based on keywords.</p></div>
-        <div class="feature-card"><h3>🌙 Accessible design</h3><p>Dark/light mode, mobile‑friendly, works on any device with a browser.</p></div>
+        <div class="feature-card"><h3>📲 Easy Reporting</h3><p>Photo, one-tap geo-location, smart categories (roads, water, electricity, safety, cleanliness). Works on any smartphone.</p></div>
+        <div class="feature-card"><h3>📍 Real-Time Tracking</h3><p>Every complaint gets a unique ID (CFX-001, CFX-002...). Citizens track “Pending → In Progress → Resolved” live, no refresh needed.</p></div>
+        <div class="feature-card"><h3>🧠 Smart Priority</h3><p>Complaints auto-labeled as Critical / High / Normal based on keywords, ensuring urgent issues get immediate attention.</p></div>
+        <div class="feature-card"><h3>📊 Admin Dashboard</h3><p>Centralized analytics, department filtering, live status controls, and complaint management (delete, reset counter).</p></div>
+        <div class="feature-card"><h3>🔔 Real-Time Sync</h3><p>When admin updates status, user sees change instantly. No delays, no confusion.</p></div>
+        <div class="feature-card"><h3>🌙 Accessible Design</h3><p>Dark/light mode, GPS + manual location, works on any device. Bilingual support (English/Arabic).</p></div>
       </div>
     </div>
 
     <!-- SLIDE 4: HOW IT WORKS -->
-    <div class="slide" data-title="How it works">
-      <h2>📌 How it works – simple flow</h2>
+    <div class="slide" data-title="Process">
+      <h2>📌 How It Works – Closed-Loop Governance</h2>
       <div class="workflow-steps">
-        <div class="step"><div class="step-number">1</div><strong>📸 Citizen reports</strong><br>Adds photo, category, description, location. Submits.</div>
-        <div class="step"><div class="step-number">2</div><strong>✅ Admin reviews</strong><br>Dashboard shows all complaints. Officials update status.</div>
-        <div class="step"><div class="step-number">3</div><strong>🔄 Live tracking</strong><br>User sees status change instantly (Pending → In Progress → Resolved).</div>
+        <div class="step"><div class="step-number">1</div><strong>📸 Citizen Reports</strong><br>Adds photo, category, description, location. Submits.</div>
+        <div class="step"><div class="step-number">2</div><strong>✅ Admin Reviews</strong><br>Dashboard shows all complaints. Officials update status.</div>
+        <div class="step"><div class="step-number">3</div><strong>🔄 Live Tracking</strong><br>User sees status change instantly (Pending → In Progress → Resolved).</div>
       </div>
       <div style="margin-top: 32px; background: #0D1915; padding: 20px; border-radius: 28px;">
-        <p>✅ <strong>End‑to‑end transparency:</strong> every status update is visible. No black holes.</p>
+        <p>✅ <strong>End-to-end transparency:</strong> every status update is visible. No black holes.</p>
       </div>
     </div>
 
     <!-- SLIDE 5: IMPACT METRICS -->
     <div class="slide" data-title="Impact">
-      <h2>📈 Measurable impact</h2>
+      <h2>📈 Measurable Impact</h2>
       <div class="grid-2col">
         <div class="stat-card"><div class="stat-number">100%</div><div>transparent workflow — every complaint tracked</div></div>
-        <div class="stat-card"><div class="stat-number">Real‑time</div><div>status updates — no refresh needed</div></div>
+        <div class="stat-card"><div class="stat-number">Real-time</div><div>status updates — no refresh needed</div></div>
         <div class="stat-card"><div class="stat-number">Centralized</div><div>dashboard for all municipal complaints</div></div>
         <div class="stat-card"><div class="stat-number">24/7</div><div>accessibility for citizens</div></div>
       </div>
@@ -307,21 +319,22 @@
       </div>
     </div>
 
-    <!-- SLIDE 6: ADMIN DASHBOARD FEATURES -->
-    <div class="slide" data-title="Admin Dashboard">
-      <h2>🏛️ Admin dashboard – full control</h2>
+    <!-- SLIDE 6: ADMIN DASHBOARD -->
+    <div class="slide" data-title="Admin">
+      <h2>🏛️ Admin Dashboard – Full Control</h2>
       <div class="grid-2col">
-        <div class="feature-card"><h3>📋 All complaints</h3><p>View every report with photo, description, location, and timestamp.</p></div>
-        <div class="feature-card"><h3>⚙️ Status management</h3><p>Change status: Pending → In Progress → Resolved. Saves instantly.</p></div>
-        <div class="feature-card"><h3>🔍 Filters & search</h3><p>Filter by status or priority. Search by Case ID.</p></div>
-        <div class="feature-card"><h3>📊 Live stats</h3><p>Real-time counts: Total reports, Pending, In Progress, Resolved, Critical.</p></div>
+        <div class="feature-card"><h3>📋 All Complaints</h3><p>View every report with photo, description, location, and timestamp.</p></div>
+        <div class="feature-card"><h3>⚙️ Status Management</h3><p>Change status: Pending → In Progress → Resolved. Saves instantly. Real-time sync to user.</p></div>
+        <div class="feature-card"><h3>🔍 Department Filters</h3><p>Filter by category: Roads, Water, Electricity, Safety, Cleanliness, Environment, Others.</p></div>
+        <div class="feature-card"><h3>🗑️ Complaint Deletion</h3><p>Delete individual complaints or clear all with one click.</p></div>
+        <div class="feature-card"><h3>🔄 Counter Reset</h3><p>Admin can reset Case ID counter to any number (e.g., restart from CFX-001).</p></div>
+        <div class="feature-card"><h3>📊 Live Statistics</h3><p>Real-time counts: Total reports, Pending, In Progress, Resolved, Critical.</p></div>
       </div>
-      <div class="pill" style="margin-top: 28px;">✅ Simple, clean, and ready for municipal teams.</div>
     </div>
 
     <!-- SLIDE 7: CATEGORIES COVERED -->
     <div class="slide" data-title="Categories">
-      <h2>📂 Issue categories covered</h2>
+      <h2>📂 Issue Categories Covered</h2>
       <div class="grid-2col">
         <div class="feature-card"><h3>🏗️ Infrastructure</h3><p>Roads & Potholes, Drainage Blockage, Footpath Damage, Building Violations</p></div>
         <div class="feature-card"><h3>💧 Utilities</h3><p>Water Supply, Electricity</p></div>
@@ -333,30 +346,33 @@
     </div>
 
     <!-- SLIDE 8: WHY PARTNER -->
-    <div class="slide" data-title="Why partner">
-      <h2>🤝 Why partner with CityFix?</h2>
+    <div class="slide" data-title="Why Partner">
+      <h2>🤝 Why Partner with CityFix?</h2>
       <div class="grid-2col">
-        <div><span style="font-size: 2rem;">✅</span><br><strong>Ready to deploy</strong><br>No complex setup. Works today.</div>
-        <div><span style="font-size: 2rem;">💰</span><br><strong>Cost‑effective</strong><br>Lightweight platform, minimal infrastructure.</div>
-        <div><span style="font-size: 2rem;">📢</span><br><strong>Builds trust</strong><br>Transparency improves citizen satisfaction and government credibility.</div>
-        <div><span style="font-size: 2rem;">🛡️</span><br><strong>Simple & secure</strong><br>Data stays in browser; easy to deploy on municipal systems.</div>
+        <div><span style="font-size: 2rem;">✅</span><br><strong>Ready to Deploy</strong><br>No complex setup. Works today.</div>
+        <div><span style="font-size: 2rem;">💰</span><br><strong>Cost-Effective</strong><br>Lightweight platform, minimal infrastructure.</div>
+        <div><span style="font-size: 2rem;">📢</span><br><strong>Builds Trust</strong><br>Transparency improves citizen satisfaction and government credibility.</div>
+        <div><span style="font-size: 2rem;">🛡️</span><br><strong>Simple & Secure</strong><br>Private admin dashboard, secure API backend.</div>
       </div>
     </div>
 
     <!-- SLIDE 9: NEXT STEPS -->
     <div class="slide" data-title="Next Steps">
-      <h2>📌 Next steps – pilot deployment</h2>
+      <h2>📌 Next Steps – Pilot Deployment</h2>
       <div class="workflow-steps" style="margin-bottom: 28px;">
-        <div class="step"><div class="step-number">1</div><strong>Pilot launch</strong><br>Select one ward or zone. Deploy user page + admin dashboard.</div>
-        <div class="step"><div class="step-number">2</div><strong>Train officers</strong><br>2‑hour session for admin dashboard usage.</div>
-        <div class="step"><div class="step-number">3</div><strong>Citizen rollout</strong><br>Share link with residents. Start receiving reports.</div>
-        <div class="step"><div class="step-number">4</div><strong>Review & scale</strong><br>Measure impact, expand city‑wide.</div>
+        <div class="step"><div class="step-number">1</div><strong>Pilot Launch</strong><br>Select one ward or zone. Deploy user page + admin dashboard.</div>
+        <div class="step"><div class="step-number">2</div><strong>Train Officers</strong><br>2-hour session for admin dashboard usage.</div>
+        <div class="step"><div class="step-number">3</div><strong>Citizen Rollout</strong><br>Share link with residents. Start receiving reports.</div>
+        <div class="step"><div class="step-number">4</div><strong>Review & Scale</strong><br>Measure impact, expand city-wide.</div>
+      </div>
+      <div style="background: #0E1915; border-radius: 28px; padding: 24px; text-align: center;">
+        <p style="font-size: 1.1rem;">🔗 <strong>Live Demo:</strong> <a href="https://cityfix11.netlify.app/" style="color: #C6A15B;" target="_blank">https://cityfix11.netlify.app/</a></p>
       </div>
     </div>
 
     <!-- SLIDE 10: CLOSING -->
     <div class="slide" data-title="Together">
-      <h2>🏙️ Let’s build better cities. Together.</h2>
+      <h2>🏙️ Let's Build Better Cities. Together.</h2>
       <p style="font-size: 1.4rem; margin: 28px 0;">CityFix is simple, honest, and ready to serve your municipality today.</p>
       <div style="background: #0B1512; border-radius: 36px; padding: 32px; text-align: center; margin: 28px 0;">
         <div style="font-size: 1.6rem;">🇦🇪 <strong>For smarter civic governance</strong></div>
